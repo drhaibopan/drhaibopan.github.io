@@ -48,7 +48,7 @@ widget:
 **Doctor of Philosophy in Marketing, 2016-2022**\
 *City University of Hong Kong, China*
 
-**Master of Management in Enterprise Management, 2010-2013**\
+**Master of Management in Business Administration, 2010-2013**\
 *Harbin Institute of Technology, China*
 
 **Bachelor of Management in Marketing, 2006-2010**\
