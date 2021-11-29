@@ -48,7 +48,7 @@ widget:
 **Doctor of Philosophy in Marketing, 2016-2022**\
 *City University of Hong Kong, China*
 
-**Master of Engineering in Enterprise Managment, 2010-2013**\
+**Master of Management in Enterprise Management, 2010-2013**\
 *Harbin Institute of Technology, China*
 
 **Bachelor of Management in Marketing, 2006-2010**\
@@ -66,4 +66,4 @@ widget:
 
 -   **Pan, Haibo**, and Xu Zheng (2021), "The Higher Ads Spending, The Better Financial Performance? The Role of Franchisee Configuration", ***Manuscript Preparation for Journal of Retailing***. </br>
 
--   Antia, Kersi D., Xu Zheng and **Haibo Pan** (2021), "The Financial Impact Of And Firms' Marketing Response To International Terrorism: 9/11 And The Global Airline Industry", ***Data Analysis Phase***.
+-   Antia, Kersi D., Xu Zheng and **Haibo Pan** (2021), "The Financial Impact of And Firms' Marketing Response To International Terrorism: 9/11 And The Global Airline Industry", ***Data Analysis Phase***.
