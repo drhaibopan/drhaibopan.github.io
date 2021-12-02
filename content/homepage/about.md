@@ -45,14 +45,11 @@ widget:
 
 ## Education
 
-**Doctor of Philosophy in Marketing, 2016-2022**
-*City University of Hong Kong, China*
+**Doctor of Philosophy in Marketing, 2016-2022** </br> *City University of Hong Kong, China*
 
-**Master of Management in Business Administration, 2010-2013**
-*Harbin Institute of Technology, China*
+**Master of Management in Business Administration, 2010-2013** </br> *Harbin Institute of Technology, China*
 
-**Bachelor of Management in Marketing, 2006-2010**
-*Harbin Institute of Technology, China*
+**Bachelor of Management in Marketing, 2006-2010** </br> *Harbin Institute of Technology, China*
 
 ## Research Interests
 
