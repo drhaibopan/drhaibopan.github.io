@@ -66,8 +66,8 @@ widget:
 
 ## Ongoing Projects
 
--   **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", ***Manuscript Preparation for Journal of Marketing Research***. </br>
+-   **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", ***Manuscript Preparation for Journal of Marketing Research***. <br> <br>
 
--   **Pan, Haibo**, and Xu Zheng (2021), "The Higher Ads Spending, The Better Financial Performance? The Role of Franchisee Configuration", ***Manuscript Preparation for Journal of Retailing***. </br>
+-   **Pan, Haibo**, and Xu Zheng (2021), "The Higher Ads Spending, The Better Financial Performance? The Role of Franchisee Configuration", ***Manuscript Preparation for Journal of Retailing***. <br> <br>
 
 -   Antia, Kersi D., Xu Zheng and **Haibo Pan** (2021), "The Financial Impact of And Firms' Marketing Response To International Terrorism: 9/11 And The Global Airline Industry", ***Data Analysis Phase***.
