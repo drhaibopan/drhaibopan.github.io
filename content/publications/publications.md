@@ -1,8 +1,5 @@
-
 ---
 title: Publications
-draft: false
-background: white
 ---
 
 

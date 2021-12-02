@@ -45,13 +45,13 @@ widget:
 
 ## Education
 
-**Doctor of Philosophy in Marketing, 2016-2022**\
+**Doctor of Philosophy in Marketing, 2016-2022**
 *City University of Hong Kong, China*
 
-**Master of Management in Business Administration, 2010-2013**\
+**Master of Management in Business Administration, 2010-2013**
 *Harbin Institute of Technology, China*
 
-**Bachelor of Management in Marketing, 2006-2010**\
+**Bachelor of Management in Marketing, 2006-2010**
 *Harbin Institute of Technology, China*
 
 ## Research Interests
@@ -59,6 +59,13 @@ widget:
 -   **Channel Governance**, with Emphasis on Franchising, Agency Theory, and Institutional Theory
 
 -   The Application of **Social Identity Theory** in Consumer Behaviors and Marketing Strategy
+
+## Teaching Interests
+
+-   R and Business Analysis
+-   R and Academic Research in Social Science
+-   International Marketing
+-   Branding Managment
 
 ## Ongoing Projects
 
