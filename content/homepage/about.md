@@ -8,15 +8,16 @@ avatar: images/icon.png
 #  name: Example Organization
 #  url: https://example.com/
 social:
-  - icon: envelope
-    iconPack: fas
-    url: haibopan@outlook.com
+
+#  - icon: user-circle
+#    iconPack: fas 
+#    url: /cv/cv_pan_211201.pdf
   - icon: graduation-cap
     iconPack: fas
     url: https://scholar.google.com/citations?user=KLlRqMUAAAAJ&hl=zh-CN
-# - icon: github
-#   iconPack: fab
-#   url: https://example.com/
+  - icon: envelope
+    iconPack: fas
+    url: mailto:haibopan@outlook.com
 
 weight: 1
 widget:
