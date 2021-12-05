@@ -5,23 +5,17 @@ date: 2021-12-01
 
 ## <font color = 'darkred'> Education </font>
 
-<pre> 
-<b> Doctor of Philosophy in Marketing</b>, 2016.09-2022.01 
-<em> City University of Hong Kong</em>, China
+**Doctor of Philosophy in Marketing**, 2016.09-2022.01 <br> <font color ='teal'>City University of Hong Kong</font>, China <br><br>
 
-<b> Master of Management in Business Administration</b>, 2010.09-2013.01 
-<em> Harbin Institute of Technology </em>, China
+**Master of Management in Business Administration**, 2010.09-2013.01 <br><font color ='teal'> Harbin Institute of Technology</font>, China <br><br>
 
-<b> Bachelor of Management in Marketing</b>, 2006.09-2010.07
-<i> Harbin Institute of Technology</i>, China
-
-</pre>
+**Bachelor of Management in Marketing**, 2006.09-2010.07 <br> <font color ='teal'>Harbin Institute of Technology</font>, China
 
 ## <font color = 'darkred'> Research Interests </font>
 
--   **Channel Governance** <br> With emphasis on ***Franchising***, ***Agency Theory***, and ***Institutional Theory*** <br> <br>
+-   **Channel Governance** <br> With emphasis on <font color ='teal'>Franchising</font>, <font color ='teal'>Agency Theory</font>, and <font color ='teal'>Institutional Theory</font> <br> <br>
 
--   **Social Identity Theory** <br> With emphasis on ***Consumer Behaviors*** and ***Marketing Strategy***
+-   **Social Identity Theory** <br> With emphasis on <font color ='teal'>Consumer Behaviors</font> and <font color ='teal'>Marketing Strategy</font>
 
 ## <font color = 'darkred'>Teaching Interests</font>
 
@@ -32,8 +26,8 @@ date: 2021-12-01
 
 ## <font color = 'brown'>Ongoing Projects</font>
 
--   **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", ***Manuscript Preparation for Journal of Marketing Research***. <br> <br>
+-   **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", <font color ='teal'><i>Manuscript Preparation for Journal of Marketing Research</i></font>. <br> <br>
 
--   **Pan, Haibo**, and Xu Zheng (2021), "The Higher Ads Spending, The Better Financial Performance? The Role of Franchisee Configuration", ***Manuscript Preparation for Journal of Retailing***. <br> <br>
+-   **Pan, Haibo**, and Xu Zheng (2021), "The Higher Ads Spending, The Better Financial Performance? The Role of Franchisee Configuration", <font color ='teal'><i>Manuscript Preparation for Journal of Retailing</i></font>. <br> <br>
 
--   Antia, Kersi D., Xu Zheng and **Haibo Pan** (2021), "The Financial Impact of And Firms' Marketing Response To International Terrorism: 9/11 And The Global Airline Industry", ***Data Analysis Phase***.
+-   Antia, Kersi D., Xu Zheng and **Haibo Pan** (2021), "The Financial Impact of And Firms' Marketing Response To International Terrorism: 9/11 And The Global Airline Industry", <font color ='teal'><i>Data Analysis Phase</i></font>.
