@@ -1,5 +1,5 @@
 ---
-title: Hello, I'm Raymond
+title: Hello, I'm Raymond 
 draft: false
 role: A Marketing Researcher
 avatar: images/icon.png
@@ -34,7 +34,7 @@ widget:
   
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
-    color: secondary
+    color: DarkSlateGray
     image: 
     # Options: auto, cover and contain. Default is auto.
     size: cover
@@ -43,3 +43,7 @@ widget:
     # Options: fixed, local, scroll.
     attachment: 
 ---
+
+<style>
+.widget-title { font-weight: italic; margin-bottom: 1rem; }
+</style>

@@ -1,19 +1,27 @@
+---
+title: "Eureka About Format Settings"
+output: html_notebook
+---
+
 <div class="flex flex-col md:flex-row items-center justify-center mb-12">
-  {{ $img := partial "utils/get-image" (dict "context" . "url" .Params.avatar "keyword" "*avatar*")}}
-  {{ with $img }}
-    <div class="flex-none w-48 mx-auto md:ml-0 md:mr-8 md:pr-8 ">
+
+{{ \$img := partial "utils/get-image" (dict "context" . "url" .Params.avatar "keyword" "*avatar*")}} {{ with \$img }}
+
+::: {.flex-none .w-48 .mx-auto .md:ml-0 .md:mr-8 .md:pr-8 .md:border-r}
       <img src="{{ . }}" class="rounded-full" alt="Avatar">
     </div>
-  {{ end }}
-  <div class="flex-grow mt-4 md:mt-0">
+
+{{ end }}
+
+::: {.flex-grow .mt-4 .md:mt-0}
     <div class="text-3xl py-4">
-      <font color = 'white'><b>{{ .Title }}</b></font>
+      <font face = 'georgia'><b>{{ .Title }}</b></font>
       </div>
+    <div class="w-3/12 xl:w-2/12 border-b"></div>
 
     <div class="flex items-center pt-4">
-      <font color='gold'>
       {{ with or (.Params.role) (.Params.organizations)}}
-      <i class="fas fa-user"></i>
+        <i class="fas fa-user"></i>
       {{ end }}
       <div class="flex flex-wrap">
         {{ with .Params.role }}
@@ -23,7 +31,6 @@
         {{ with .Params.organization }}
           <a href="{{ .url }}" class="pl-4">{{ .name | markdownify }}</a>
         {{ end }}
-        </font>
       </div>
 
     </div>
@@ -33,9 +40,9 @@
         {{ . | markdownify }}
       </div>
     {{ end }}
-  </div>
-  <div class="flex md:flex-col justify-center items-end ml-8">
-    <font color = 'white'>
+:::
+
+::: {.flex .md:flex-col .justify-center .items-end .ml-8}
     {{ $brand := $.Param "social"}}
     {{ range $brand }}
       {{/* Deprecation warning(v1.0.0) starts */}}
@@ -49,9 +56,9 @@
         <a href="{{ .url }}"><i class="{{ print $src }}"></i></a>
       </div>
     {{ end }}
-    </font>
-  </div>
-</div>
-<div class="content">
-  {{ .Content }}
-</div>
+:::
+:::
+
+::: content
+{{ .Content }}
+:::

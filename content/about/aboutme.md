@@ -3,7 +3,7 @@ title: Dr. Haibo Pan (潘海波博士)
 date: 2021-12-01
 ---
 
-## Education
+## <font color = 'darkred'> Education </font>
 
 <pre> 
 <b> Doctor of Philosophy in Marketing</b>, 2016.09-2022.01 
@@ -17,20 +17,20 @@ date: 2021-12-01
 
 </pre>
 
-## Research Interests
+## <font color = 'darkred'> Research Interests </font>
 
 -   **Channel Governance** <br> With emphasis on ***Franchising***, ***Agency Theory***, and ***Institutional Theory*** <br> <br>
 
 -   **Social Identity Theory** <br> With emphasis on ***Consumer Behaviors*** and ***Marketing Strategy***
 
-## Teaching Interests
+## <font color = 'darkred'>Teaching Interests</font>
 
 -   R and Business Analysis
 -   R and Academic Research in Social Science
 -   International Marketing
 -   Branding Managment
 
-## Ongoing Projects
+## <font color = 'brown'>Ongoing Projects</font>
 
 -   **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", ***Manuscript Preparation for Journal of Marketing Research***. <br> <br>
 
