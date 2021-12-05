@@ -12,7 +12,7 @@ date: 2021-12-01
 <b> Master of Management in Business Administration</b>, 2010.09-2013.01 
 <em> Harbin Institute of Technology </em>, China
 
-<b> Bachelor of Management in Marketing</b>, 2006.09-2010.09
+<b> Bachelor of Management in Marketing</b>, 2006.09-2010.07
 <i> Harbin Institute of Technology</i>, China
 
 </pre>
