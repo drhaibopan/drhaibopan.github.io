@@ -27,7 +27,7 @@ widget:
     attachment: 
 ---
 
-<font color = 'teal' size = 4> <i>"It does not matter how slowly you go so long as you do not stop." -- Confucius</i></font>
+<font color = 'black' size = 4> <i>"It does not matter how slowly you go so long as you do not stop." -- Confucius</i></font>
 
 <div style="text-align:center">
   <p>   

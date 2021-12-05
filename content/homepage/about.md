@@ -3,18 +3,19 @@ title: Hello, I'm Raymond
 draft: false
 role: A Marketing Researcher
 avatar: images/icon.png
+
 # bio: Aenean vel bibendum quam. Aliquam at mollis quam. Proin efficitur.
 # organization:
 #  name: Example Organization
 #  url: https://example.com/
 social:
 
-  - icon: user-circle
-    iconPack: fas 
-    url: /cv/cv_pan_211205.pdf
   - icon: graduation-cap
     iconPack: fas
     url: https://scholar.google.com/citations?user=KLlRqMUAAAAJ&hl=zh-CN
+  - icon: address-card
+    iconPack: fas 
+    url: /cv/cv_pan_211205.pdf
   - icon: envelope
     iconPack: fas
     url: mailto:haibopan@outlook.com
