@@ -24,13 +24,13 @@ widget:
   handler: about
 
   # Options: sm, md, lg and xl. Default is md.
-  width: sm
+  width: lg
 
   sidebar:
     # Options: left and right. Leave blank to hide.
     position:
     # Options: sm, md, lg and xl. Default is md.
-    scale: xl
+    scale: lg
   
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
