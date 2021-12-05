@@ -1,13 +1,10 @@
 ---
-title: Vintage
+title: Blank
 draft: false
-slogan: We are all in the gutter, but some of us are looking at the stars.
-imgLeft: images/hero-left.jpg
-imgRight: images/hero-right.jpg
 
-weight: 2
+weight: 5
 widget:
-  handler: vintage
+  handler: blank
 
   # Options: sm, md, lg and xl. Default is md.
   width:
@@ -16,16 +13,24 @@ widget:
     # Options: left and right. Leave blank to hide.
     position:
     # Options: sm, md, lg and xl. Default is md.
-    scale:
-    
+    scale: xl
+  
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
-    color: secondary
-    image:
+    color:
+    image: 
     # Options: auto, cover and contain. Default is auto.
-    size:
+    size: cover
     # Options: center, top, right, bottom, left.
     position:
     # Options: fixed, local, scroll.
     attachment: 
 ---
+
+     "It does not matter how slowly you go as long as you do not stop."
+                                                      -- Confucius
+
+<div style="text-align:center">
+  <p>   
+  </p>
+</div>

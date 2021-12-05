@@ -1,5 +1,5 @@
 ---
-title: Dr. Haibo Pan (潘海波博士)
+title: Hello, I'm Raymond
 draft: false
 role: A Marketing Researcher
 avatar: images/icon.png
@@ -24,51 +24,22 @@ widget:
   handler: about
 
   # Options: sm, md, lg and xl. Default is md.
-  width:
+  width: sm
 
   sidebar:
     # Options: left and right. Leave blank to hide.
     position:
     # Options: sm, md, lg and xl. Default is md.
-    scale:
+    scale: xl
   
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
     color: secondary
-    image:
+    image: 
     # Options: auto, cover and contain. Default is auto.
-    size:
+    size: cover
     # Options: center, top, right, bottom, left.
-    position:
+    position: right
     # Options: fixed, local, scroll.
     attachment: 
 ---
-
-## Education
-
-**Doctor of Philosophy in Marketing, 2016-2022** </br> *City University of Hong Kong, China*
-
-**Master of Management in Business Administration, 2010-2013** </br> *Harbin Institute of Technology, China*
-
-**Bachelor of Management in Marketing, 2006-2010** </br> *Harbin Institute of Technology, China*
-
-## Research Interests
-
--   **Channel Governance**, with Emphasis on Franchising, Agency Theory, and Institutional Theory
-
--   The Application of **Social Identity Theory** in Consumer Behaviors and Marketing Strategy
-
-## Teaching Interests
-
--   R and Business Analysis
--   R and Academic Research in Social Science
--   International Marketing
--   Branding Managment
-
-## Ongoing Projects
-
--   **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", ***Manuscript Preparation for Journal of Marketing Research***. <br> <br>
-
--   **Pan, Haibo**, and Xu Zheng (2021), "The Higher Ads Spending, The Better Financial Performance? The Role of Franchisee Configuration", ***Manuscript Preparation for Journal of Retailing***. <br> <br>
-
--   Antia, Kersi D., Xu Zheng and **Haibo Pan** (2021), "The Financial Impact of And Firms' Marketing Response To International Terrorism: 9/11 And The Global Airline Industry", ***Data Analysis Phase***.
