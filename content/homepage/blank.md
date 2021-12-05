@@ -27,7 +27,7 @@ widget:
     attachment: 
 ---
 
-     "It does not matter how slowly you go as long as you do not stop."   -- Confucius
+     "It does not matter how slowly you go so long as you do not stop."   -- Confucius
 
 <div style="text-align:center">
   <p>   
