@@ -9,9 +9,9 @@ avatar: images/icon.png
 #  url: https://example.com/
 social:
 
-#  - icon: user-circle
-#    iconPack: fas 
-#    url: /cv/cv_pan_211201.pdf
+  - icon: user-circle
+    iconPack: fas 
+    url: /cv/cv_pan_211205.pdf
   - icon: graduation-cap
     iconPack: fas
     url: https://scholar.google.com/citations?user=KLlRqMUAAAAJ&hl=zh-CN

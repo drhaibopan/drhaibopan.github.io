@@ -5,11 +5,11 @@ date: 2021-12-01
 
 ## <font color = 'darkred'> Education </font>
 
-**Doctor of Philosophy in Marketing**, 2016.09-2022.01 <br> <font color ='teal'>City University of Hong Kong</font>, China <br><br>
+<font size =4><b>Doctor of Philosophy in Marketing</b>, 2016.09-2022.01</font> <br> <font color ='teal'><b>City University of Hong Kong</b></font>, China <br><br>
 
-**Master of Management in Business Administration**, 2010.09-2013.01 <br><font color ='teal'> Harbin Institute of Technology</font>, China <br><br>
+<font size =4><b>Master of Management in Business Administration</b>, 2010.09-2013.01</font> <br><font color ='teal'><b> Harbin Institute of Technology</b></font>, China <br><br>
 
-**Bachelor of Management in Marketing**, 2006.09-2010.07 <br> <font color ='teal'>Harbin Institute of Technology</font>, China
+<font size =4><b>Bachelor of Management in Marketing</b>, 2006.09-2010.07</font> <br> <font color ='teal'><b>Harbin Institute of Technology</b></font>, China
 
 ## <font color = 'darkred'> Research Interests </font>
 
