@@ -17,14 +17,14 @@ widget:
   
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
-    color: 
-    image: 
+    #color: teal
+    #image: img/img8.jpg
     # Options: auto, cover and contain. Default is auto.
-    size: 
+    size: cover
     # Options: center, top, right, bottom, left.
     position: cover
     # Options: fixed, local, scroll.
-    attachment: 
+    attachment: fixed
 ---
 
 <font color = 'gray' size = 4><b><i>"It does not matter how slowly you go so long as you do not stop." -- Confucius</i></b></font>
