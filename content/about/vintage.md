@@ -1,39 +1,31 @@
 ---
-title: Blank
+title: Vintage
 draft: false
+slogan: It does not matter how slowly you go so long as you do not stop.                  --Confucius
+#imgLeft: img/img7.jpg
+#imgRight: img/img8.jpg
 
-weight: 5
+weight: 2
 widget:
-  handler: blank
+  handler: vintage
 
   # Options: sm, md, lg and xl. Default is md.
-  width: lg
+  width: sm
 
   sidebar:
     # Options: left and right. Leave blank to hide.
-    position:
+    position: 
     # Options: sm, md, lg and xl. Default is md.
     scale: xl
-  
+    
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
-    # color: teal
-    #image: img/img4.jpg
+    color: teal
+    # image: img/img8.jpg
     # Options: auto, cover and contain. Default is auto.
     size: cover
     # Options: center, top, right, bottom, left.
-    position: cover
+    position:
     # Options: fixed, local, scroll.
-    attachment: fixed
+    attachment:  scroll
 ---
-
-<div> 
-    <blockquote style = "text-align:center">
-        <p>
-        <br><br><br>
-        <font color = 'gray' size = 4><b><i>
-        "It does not matter how slowly you go so long as you do not stop."                 —Confucius
-        </i></b></font>
-        </p>
-    </blockquote>
-</div>
