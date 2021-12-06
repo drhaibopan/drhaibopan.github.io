@@ -1,0 +1,62 @@
+---
+title: "Eureka About Format Settings"
+output: html_notebook
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div class="flex flex-col md:flex-row items-center justify-center mb-12">
+
+<p>{{ $img := partial “utils/get-image” (dict “context” . “url” .Params.avatar “keyword” “<em>avatar</em>”)}} {{ with $img }}</p>
+<div class="flex-none w-48 mx-auto md:ml-0 md:mr-8 md:pr-8 md:border-r">
+<pre><code>  &lt;img src=&quot;{{ . }}&quot; class=&quot;rounded-full&quot; alt=&quot;Avatar&quot;&gt;
+&lt;/div&gt;</code></pre>
+<p>{{ end }}</p>
+<div class="flex-grow mt-4 md:mt-0">
+<pre><code>&lt;div class=&quot;text-3xl py-4&quot;&gt;
+  &lt;font face = &#39;georgia&#39;&gt;&lt;b&gt;{{ .Title }}&lt;/b&gt;&lt;/font&gt;
+  &lt;/div&gt;
+&lt;div class=&quot;w-3/12 xl:w-2/12 border-b&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;flex items-center pt-4&quot;&gt;
+  {{ with or (.Params.role) (.Params.organizations)}}
+    &lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+  {{ end }}
+  &lt;div class=&quot;flex flex-wrap&quot;&gt;
+    {{ with .Params.role }}
+      &lt;span class=&quot;pl-4&quot;&gt;{{ . | markdownify }}&lt;/span&gt;
+    {{ end }}
+
+    {{ with .Params.organization }}
+      &lt;a href=&quot;{{ .url }}&quot; class=&quot;pl-4&quot;&gt;{{ .name | markdownify }}&lt;/a&gt;
+    {{ end }}
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+{{ with .Params.bio }}
+  &lt;div class=&quot;py-8 text-lg leading-normal&quot;&gt;
+    {{ . | markdownify }}
+  &lt;/div&gt;
+{{ end }}</code></pre>
+</div>
+<div class="flex md:flex-col justify-center items-end ml-8">
+<pre><code>{{ $brand := $.Param &quot;social&quot;}}
+{{ range $brand }}
+  {{/* Deprecation warning(v1.0.0) starts */}}
+  {{ if .icon_pack }}
+    {{ warnf &quot;Param &#39;icon_pack&#39; in %q is deprecated and will be removed in Eureka v1.0.0. Please use &#39;iconPack&#39; instead.&quot; $.File.Path }}
+  {{ end }}
+  {{ $iconPack := .iconPack | default .icon_pack }}
+  {{/* Deprecation warning(v1.0.0) ends */}}
+  {{ $src := print $iconPack &quot; fa-&quot; .icon }}
+  &lt;div class=&quot;pb-2 pr-4 md:pr-0 pt-4 md:pt-0&quot;&gt;
+    &lt;a href=&quot;{{ .url }}&quot;&gt;&lt;i class=&quot;{{ print $src }}&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+{{ end }}</code></pre>
+</div>
+</div>
+<div class="content">
+<p>{{ .Content }}</p>
+</div>
