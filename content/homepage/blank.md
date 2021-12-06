@@ -17,7 +17,7 @@ widget:
   
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
-    # color: teal
+    # color: 
     #image: img/img4.jpg
     # Options: auto, cover and contain. Default is auto.
     size: cover
@@ -27,6 +27,13 @@ widget:
     attachment: fixed
 ---
 
+<html>
+   <head>
+   </head>
+   <body style="background-color:white;">
+   </body>
+</html>
+
 <div> 
     <blockquote style = "text-align:center">
         <p>
@@ -34,6 +41,11 @@ widget:
         <font color = 'gray' size = 4><b><i>
         "It does not matter how slowly you go so long as you do not stop."                 —Confucius
         </i></b></font>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br><br>
         </p>
     </blockquote>
 </div>
