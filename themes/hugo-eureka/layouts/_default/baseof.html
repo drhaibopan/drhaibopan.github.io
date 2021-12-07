@@ -11,7 +11,7 @@
   
   <main class="flex-grow pt-16">
 
-    <font color='darkred'>
+    <font color='darkred' size = 3>
     {{- if or .IsHome (and (eq .Type "authors") (eq .Kind "term")) }}
     {{- block "main" . }}{{- end }}
     {{- else }}
