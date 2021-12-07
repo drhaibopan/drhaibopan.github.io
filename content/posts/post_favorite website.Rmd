@@ -5,13 +5,13 @@ date: 2021-12-07
 
 ***Here are my favorite academic websites***
 
-# General
+## <font color= "darkred"> General </font>
 
 1.  [Connected Paper](https://www.connectedpapers.com): paper network
 2.  [Google Scholar](https://scholar.google.com)
 3.  [Scribbr](https://www.scribbr.com): plagiarism checker and proofreading
 
-# Toolkits
+## <font color= "darkred"> Toolkits </font>
 
 1.  [Zotero](https://www.zotero.org)
 2.  [Zettr](https://www.zettlr.com)
