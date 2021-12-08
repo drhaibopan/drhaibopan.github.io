@@ -31,6 +31,8 @@ date: 2021-12-07
 2.  [Zettr](https://www.zettlr.com)
 3.  [RStudio](https://www.rstudio.com)
 4.  [OBS Studio](https://obsproject.com/zh-tw)
+5.  [Net News Wire](https://netnewswire.com): RSS Reader
+6.  [Blender](https://www.blender.org)
 
 ## <font color= "darkred"> Online Database </font>
 
@@ -61,6 +63,12 @@ date: 2021-12-07
 9.  [Xaringan Extra](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
 
 10. [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
+
+11. [ggplot2](https://ggplot2-book.org)
+
+12. [CSS](https://www.w3schools.com/css/css_background.asp)
+
+13. [HTML](https://www.w3schools.com/html/html_intro.asp)
 
 ## <font color= "darkred"> Image Search </font>
 
