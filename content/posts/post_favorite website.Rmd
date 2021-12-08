@@ -1,5 +1,5 @@
 ---
-title: "Favorite Academic Website"
+title: "Favorite Websites"
 date: 2021-12-07
 ---
 
@@ -7,9 +7,23 @@ date: 2021-12-07
 
 ## <font color= "darkred"> General </font>
 
-1.  [Connected Paper](https://www.connectedpapers.com): paper network
-2.  [Google Scholar](https://scholar.google.com)
-3.  [Scribbr](https://www.scribbr.com): plagiarism checker and proofreading
+1.  [Google Scholar](https://scholar.google.com)
+
+2.  [Connected Paper](https://www.connectedpapers.com): paper network
+
+3.  [AMiner](https://www.aminer.org)
+
+4.  [Library Genesis](http://libgen.rs)
+
+5.  [Cloud Research](https://www.cloudresearch.com)
+
+6.  [Scribbr](https://www.scribbr.com): plagiarism checker and proofreading
+
+7.  [UTD 24 Journal List](https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/)
+
+8.  [FT 50 Journal List](https://www.ft.com/content/3405a512-5cbb-11e1-8f1f-00144feabdc0)
+
+9.  [ABS Jounal List 2021](https://www.researchgate.net/publication/352767191_Academic_Journal_Guide_2021_It_was_earlier_ABS_2021_Ranking_list)
 
 ## <font color= "darkred"> Toolkits </font>
 
@@ -17,3 +31,45 @@ date: 2021-12-07
 2.  [Zettr](https://www.zettlr.com)
 3.  [RStudio](https://www.rstudio.com)
 4.  [OBS Studio](https://obsproject.com/zh-tw)
+
+## <font color= "darkred"> Online Database </font>
+
+1.  [50+ free Datasets for Data Science Projects](https://blog.journeyofanalytics.com/50-free-datasets-for-data-science-projects/)
+
+2.  [Kaggle](https://www.kaggle.com): Online Projects
+
+3.  [Chinese Industry Report Search](http://report.seedsufe.com/index)
+
+## <font color= "darkred"> R Learning </font>
+
+1.  [R Documentation](https://www.rdocumentation.org/?=ggplot&=%s)
+
+2.  [R Fun](https://rfun.library.duke.edu)
+
+3.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
+
+4.  [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
+
+5.  [R Blogdown](https://bookdown.org/yihui/blogdown/)
+
+6.  [R Bookdown](https://bookdown.org/yihui/bookdown/)
+
+7.  [R Teaching](https://education.rstudio.com/teach/tools/)
+
+8.  [Xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+
+9.  [Xaringan Extra](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
+
+10. [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
+
+## <font color= "darkred"> Image Search </font>
+
+1.  [Logo Search](http://instantlogosearch.com)
+
+2.  [Virtual Background](https://coverr.co/stock-video-footage/zoom-virtual-backgrounds)
+
+3.  [Pexel Video](https://www.pexels.com/videos/)
+
+4.  [pixaby](https://pixabay.com)
+
+5.  [Font Awesome](https://fontawesome.com)
