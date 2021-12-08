@@ -70,6 +70,18 @@ date: 2021-12-07
 
 13. [HTML](https://www.w3schools.com/html/html_intro.asp)
 
+## <font color= "darkred"> Data Analysis Learning </font>
+
+1.  [QCA](https://www.bilibili.com/video/BV1nh411k7o4?p=1)
+2.  [Interpreting interaction effect](http://www.jeremydawson.com/slopes.htm)
+3.  [P Value](http://p-curve.com)
+
+## <font color= "darkred"> Theory Learning </font>
+
+1.  [IS Theory](https://is.theorizeit.org/wiki/Main_Page)
+
+2.  [Management Scales](https://en.wikibooks.org/wiki/Handbook_of_Management_Scales#I)
+
 ## <font color= "darkred"> Image Search </font>
 
 1.  [Logo Search](http://instantlogosearch.com)
