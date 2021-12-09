@@ -2,28 +2,15 @@
 output:
   xaringan::moon_reader:
     seal: false
-    css: [mydiy.css,uo-fonts]
+    css: [xaringan-themer.css,r01_diy.css,uo-fonts]
     nature:
-      slideNumberFormat: "%current%"
+      slideNumberFormat: "%current% / %total%"
       ratio: 16:9
       countIncrementalSlides: true
-      titleSlideClass: ["left", "bottom", "my-title"]
     self-contained: ture
 ---
-class: left, bottom, bg1
 
-# <font color = "Gold">Chapter 1 Introduction</font>
-## <font color = "white">Haibo Pan</font>
-## <font color = "white" size = 5>Dec-9, 2021</font>
-
----
-class: bg2
-layout:true
-<div class="footer">
-<span> 
-Copyright &copy 2021. Haibo Pan All rights reserved</span> 
-</div>
-
+class: middle, inverse
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -40,6 +27,8 @@ knitr::opts_chunk$set(
 
 
 ```{r xaringanExtra, echo = FALSE}
+library(xaringanthemer)
+style_solarized_light()
 library(xaringanExtra)
 xaringanExtra::use_tile_view()
 xaringanExtra::use_panelset()
@@ -48,36 +37,60 @@ xaringanExtra::use_fit_screen()
 xaringanExtra::use_progress_bar(color = "darkred", location = "top")
 ```
 
----
-class: bg1
+# <font color = "Gold">Chapter 1 Introduction</font>
+ <font size = 6>Haibo Pan</font> <br>
+ <font size = 5>Dec-9, 2021</font>
 
-## Outline 
+---
+layout:true
+<div class="footer">
+<span> 
+<font color ='grey'>Copyright &copy 2021. Haibo Pan. All rights reserved</font></span> 
+</div>
+
+
+
+---
+class: inverse
+
+# Outline 
 .panelset.sideways[
 .panel[ .panel-name[Agenda]
 
-- Week1.  R Essentials
+<font color ='gold'> Week1:  R Essentials</font>
 
-- Week2.  R and Data Manipulation
+Week2:  R and Data Manipulation
 
-- Week3.  R and Factor Analysis
+Week3:  R and Factor Analysis
 
-- Week4.  R and Clustering Analysis
+Week4:  R and Clustering Analysis
 
-- Week5.  R and ANOVA
+Week5:  R and Hypotheses Testing
 
-- Week6.  R and Regression
+Week6:  R and ANOVA
 
-- Week7.  R and Probit Model
+Week7:  R and Regression
 
-- Week8.  R and Data Visualization
+Week8:  R and Probit Model
 
-- Week9.  R and Data Sharing and Presentation
+Week9:  R and Data Visualization
+
+Week10:  R and Data Sharing and Presentation
 
 ]
 
 .panel[ .panel-name[ILO]
 
-- Coming Soon
+ILO1: Learn How to Learn a New Language
+
+ILO2: Conduct Data Analysis by R
+
+ILO3: Plot Beautify Graphs by R
+
+ILO4: Write Data Report by R
+
+ILO5: Present Data Results by R
+
 ]
 
 .panel[ .panel-name[Evaluation]
@@ -88,36 +101,89 @@ class: bg1
 
 .panel[ .panel-name[Requirements]
 
-- Coming Soon
+- No Noise in the Class
 ]
 
 ]
 ---
-class: center
+class: middle, center
 
-## What's R 
+.left-column[
+
+### R Essentials
+
+]
+.right-column[
+## What's R?
+ 
+## Why R?
+
+
+## How to Learn R?
+]
+
+---
+# What's R ?
+.panelset[
+.panel[ .panel-name[Introduction]
+
+- R is a **scripting language** for statistical data manipulation and analysis.
+
+> The best advantage for scripting language is that you can record your actions.
+
+<br>
+- R is inspired by, and is mostly compatible with, **S language** developed by AT&T.
+
+> S namely stands for statistics. 
+
+<br>
+- R is the initial of its two **originators**, Robert Gentleman and Ross Ihaka
+]
+
+.panel[ .panel-name[Originators]
+.pull-left[
+![Robert Gentleman](r01_appx/RobertGentleman.jpg)
+
+A **Canadian** statistician and bioinformatician (***born 1959***), currently vice president of computational biology at 23andMe.
+]
+
+.pull-right[
+![Ross Ihaka](r01_appx/RossIhaka.jpg)
+
+A **New Zealand** statistician (***born 1954***). He was an Associate Professor of Statistics at the University of Auckland until his retirement in 2017.
+]
+]
+]
+---
+# Why R?
+
 
 
 
 ---
-## What's RStudio
+# How to Learn R
+.panelset[.panel[.panel-name[Introduction]
 
+- install R and RStudio
 
+- by projects
 
----
-## What's Packages
+- use ***help*** function and ***help**** documents
 
+- use ***google*** or ***bing***
 
----
-## What can R do?
+]
+.panel[.panel-name[RStudio]
 
----
-## R Versus Other Softwares
+]
+.panel[.panel-name[R Packages]
 
----
+]
 
-## How to Learn R
+.panel[.panel-name[R Markdown]
 
+]
+]
 
 ---
 

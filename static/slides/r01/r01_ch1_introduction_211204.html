@@ -15,25 +15,14 @@
     <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
     <script src="r01_ch1_introduction_211204_files/xaringanExtra_fit-screen/fit-screen.js"></script>
     <script src="r01_ch1_introduction_211204_files/xaringanExtra-progressBar/progress-bar.js"></script>
-    <link rel="stylesheet" href="mydiy.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="r01_diy.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 
-class: left, bottom, bg1
 
-# &lt;font color = "Gold"&gt;Chapter 1 Introduction&lt;/font&gt;
-## &lt;font color = "white"&gt;Haibo Pan&lt;/font&gt;
-## &lt;font color = "white" size = 5&gt;Dec-9, 2021&lt;/font&gt;
-
----
-class: bg2
-layout:true
-&lt;div class="footer"&gt;
-&lt;span&gt; 
-Copyright &amp;copy 2021. Haibo Pan All rights reserved&lt;/span&gt; 
-&lt;/div&gt;
-
+class: middle, inverse
 
 
 
@@ -59,36 +48,60 @@ Copyright &amp;copy 2021. Haibo Pan All rights reserved&lt;/span&gt;
   100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
 }</style>
 
----
-class: bg1
+# &lt;font color = "Gold"&gt;Chapter 1 Introduction&lt;/font&gt;
+ &lt;font size = 6&gt;Haibo Pan&lt;/font&gt; &lt;br&gt;
+ &lt;font size = 5&gt;Dec-9, 2021&lt;/font&gt;
 
-## Outline 
+---
+layout:true
+&lt;div class="footer"&gt;
+&lt;span&gt; 
+&lt;font color ='grey'&gt;Copyright &amp;copy 2021. Haibo Pan. All rights reserved&lt;/font&gt;&lt;/span&gt; 
+&lt;/div&gt;
+
+
+
+---
+class: inverse
+
+# Outline 
 .panelset.sideways[
 .panel[ .panel-name[Agenda]
 
-- Week1.  R Essentials
+&lt;font color ='gold'&gt; Week1:  R Essentials&lt;/font&gt;
 
-- Week2.  R and Data Manipulation
+Week2:  R and Data Manipulation
 
-- Week3.  R and Factor Analysis
+Week3:  R and Factor Analysis
 
-- Week4.  R and Clustering Analysis
+Week4:  R and Clustering Analysis
 
-- Week5.  R and ANOVA
+Week5:  R and Hypotheses Testing
 
-- Week6.  R and Regression
+Week6:  R and ANOVA
 
-- Week7.  R and Probit Model
+Week7:  R and Regression
 
-- Week8.  R and Data Visualization
+Week8:  R and Probit Model
 
-- Week9.  R and Data Sharing and Presentation
+Week9:  R and Data Visualization
+
+Week10:  R and Data Sharing and Presentation
 
 ]
 
 .panel[ .panel-name[ILO]
 
-- Coming Soon
+ILO1: Learn How to Learn a New Language
+
+ILO2: Conduct Data Analysis by R
+
+ILO3: Plot Beautify Graphs by R
+
+ILO4: Write Data Report by R
+
+ILO5: Present Data Results by R
+
 ]
 
 .panel[ .panel-name[Evaluation]
@@ -99,36 +112,89 @@ class: bg1
 
 .panel[ .panel-name[Requirements]
 
-- Coming Soon
+- No Noise in the Class
 ]
 
 ]
 ---
-class: center
+class: middle, center
 
-## What's R 
+.left-column[
+
+### R Essentials
+
+]
+.right-column[
+## What's R?
+ 
+## Why R?
+
+
+## How to Learn R?
+]
+
+---
+# What's R ?
+.panelset[
+.panel[ .panel-name[Introduction]
+
+- R is a **scripting language** for statistical data manipulation and analysis.
+
+&gt; The best advantage for scripting language is that you can record your actions.
+
+&lt;br&gt;
+- R is inspired by, and is mostly compatible with, **S language** developed by AT&amp;T.
+
+&gt; S namely stands for statistics. 
+
+&lt;br&gt;
+- R is the initial of its two **originators**, Robert Gentleman and Ross Ihaka
+]
+
+.panel[ .panel-name[Originators]
+.pull-left[
+![Robert Gentleman](r01_appx/RobertGentleman.jpg)
+
+A **Canadian** statistician and bioinformatician (***born 1959***), currently vice president of computational biology at 23andMe.
+]
+
+.pull-right[
+![Ross Ihaka](r01_appx/RossIhaka.jpg)
+
+A **New Zealand** statistician (***born 1954***). He was an Associate Professor of Statistics at the University of Auckland until his retirement in 2017.
+]
+]
+]
+---
+# Why R?
+
 
 
 
 ---
-## What's RStudio
+# How to Learn R
+.panelset[.panel[.panel-name[Introduction]
 
+- install R and RStudio
 
+- by projects
 
----
-## What's Packages
+- use ***help*** function and ***help**** documents
 
+- use ***google*** or ***bing***
 
----
-## What can R do?
+]
+.panel[.panel-name[RStudio]
 
----
-## R Versus Other Softwares
+]
+.panel[.panel-name[R Packages]
 
----
+]
 
-## How to Learn R
+.panel[.panel-name[R Markdown]
 
+]
+]
 
 ---
 
@@ -137,7 +203,7 @@ class: center
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"slideNumberFormat": "%current%",
+"slideNumberFormat": "%current% / %total%",
 "ratio": "16:9",
 "countIncrementalSlides": true
 });

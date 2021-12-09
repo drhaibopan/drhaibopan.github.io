@@ -42,33 +42,63 @@ date: 2021-12-07
 
 3.  [Chinese Industry Report Search](http://report.seedsufe.com/index)
 
-## <font color= "darkred"> R Learning </font>
+## <font color= "darkred"> R Learning </font> {.tabset}
 
-1.  [R Documentation](https://www.rdocumentation.org/?=ggplot&=%s)
+1.  [R Fun](https://rfun.library.duke.edu)
 
-2.  [R Fun](https://rfun.library.duke.edu)
+2.  [R Teaching](https://education.rstudio.com/teach/tools/)
 
-3.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
+3.  [R Documentation](https://www.rdocumentation.org/?=ggplot&=%s)
 
-4.  [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
+### R and Analysis Techniques
 
-5.  [R Blogdown](https://bookdown.org/yihui/blogdown/)
+1.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
 
-6.  [R Bookdown](https://bookdown.org/yihui/bookdown/)
+2.  [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
 
-7.  [R Teaching](https://education.rstudio.com/teach/tools/)
+3.  [Survial Analysis](https://www.rensvandeschoot.com/tutorials/discrete-time-survival/)
 
-8.  [Xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+4.  [R Linear Regression Bayesian](https://www.rensvandeschoot.com/tutorials/r-linear-regression-bayesian-using-brms/)
 
-9.  [Xaringan Extra](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
+### R Packages
 
-10. [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
+11. [Xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html) for power point
 
-11. [ggplot2](https://ggplot2-book.org)
+12. [Xaringan Extra](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
 
-12. [CSS](https://www.w3schools.com/css/css_background.asp)
+13. [Xaringan Theme Generator](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)
 
-13. [HTML](https://www.w3schools.com/html/html_intro.asp)
+14. [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
+
+15. [FactoMineR](http://factominer.free.fr/factomethods/index.html) for factor analysis and clustering analysis
+
+16. [Factoextra](http://www.sthda.com/english/wiki/factoextra-r-package-easy-multivariate-data-analyses-and-elegant-visualization)
+
+17. [lavaan](https://lavaan.ugent.be) for SEM
+
+18. [lme4](https://www.rensvandeschoot.com/tutorials/lme4/) for HLM
+
+19. [ggplot2](https://ggplot2-book.org) for figures
+
+20. [gt](https://gt.rstudio.com/articles/intro-creating-gt-tables.html) for tables
+
+21. [ggpubr](https://rpkgs.datanovia.com/ggpubr/index.html)
+
+22. [sjPlot](https://strengejacke.github.io/sjPlot/)
+
+23. [stargazer](https://www.princeton.edu/~otorres/NiceOutputR.pdf)
+
+### R Markdown
+
+5.  [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
+
+6.  [R Blogdown](https://bookdown.org/yihui/blogdown/)
+
+7.  [R Bookdown](https://bookdown.org/yihui/bookdown/)
+
+8.  [CSS](https://www.w3schools.com/css/css_background.asp)
+
+9.  [HTML](https://www.w3schools.com/html/html_intro.asp)
 
 ## <font color= "darkred"> Data Analysis Learning </font>
 
