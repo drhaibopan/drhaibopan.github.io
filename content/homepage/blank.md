@@ -38,14 +38,23 @@ widget:
     <blockquote style = "text-align:center">
         <p>
         <br><br><br>
-        <font color = 'gray' size = 4><b><i>
+        <font color = 'gray' size = 4>
         "It does not matter how slowly you go so long as you do not stop."                 —Confucius
-        </i></b></font>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
+        </font>
+        </p>
+    </blockquote>
+</div>
+
+<div>
+    <blockquote style = "text-align:center">
+        <p>
+ <font color ='gray'>
+     "譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。" -孔子
+  </font>
+         <br><br><br>
         <br><br><br>
         <br><br><br><br>
-        </p>
+         <br><br><br><br>
+             </p>
     </blockquote>
 </div>
