@@ -50,15 +50,17 @@ date: 2021-12-07
 
 3.  [R Documentation](https://www.rdocumentation.org/?=ggplot&=%s)
 
+4.  [What They Forget to Teach you about R](https://rstats.wtf)
+
 ### R and Analysis Techniques
 
-1.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
+5.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
 
-2.  [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
+6.  [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
 
-3.  [Survial Analysis](https://www.rensvandeschoot.com/tutorials/discrete-time-survival/)
+7.  [R Linear Regression Bayesian](https://www.rensvandeschoot.com/tutorials/r-linear-regression-bayesian-using-brms/)
 
-4.  [R Linear Regression Bayesian](https://www.rensvandeschoot.com/tutorials/r-linear-regression-bayesian-using-brms/)
+8.  [Exploratory Data Analysis](https://edav.info/mosaic.html)
 
 ### R Packages
 
@@ -90,21 +92,24 @@ date: 2021-12-07
 
 ### R Markdown
 
-5.  [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
+24. [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
 
-6.  [R Blogdown](https://bookdown.org/yihui/blogdown/)
+25. [R Markdown for Scientists](https://rmd4sci.njtierney.com)
 
-7.  [R Bookdown](https://bookdown.org/yihui/bookdown/)
+26. [R Blogdown](https://bookdown.org/yihui/blogdown/)
 
-8.  [CSS](https://www.w3schools.com/css/css_background.asp)
+27. [R Bookdown](https://bookdown.org/yihui/bookdown/)
 
-9.  [HTML](https://www.w3schools.com/html/html_intro.asp)
+28. [CSS](https://www.w3schools.com/css/css_background.asp)
+
+29. [HTML](https://www.w3schools.com/html/html_intro.asp)
 
 ## <font color= "darkred"> Data Analysis Learning </font>
 
 1.  [QCA](https://www.bilibili.com/video/BV1nh411k7o4?p=1)
 2.  [Interpreting interaction effect](http://www.jeremydawson.com/slopes.htm)
 3.  [P Value](http://p-curve.com)
+4.  [Survial Analysis](https://www.rensvandeschoot.com/tutorials/discrete-time-survival/)
 
 ## <font color= "darkred"> Theory Learning </font>
 
