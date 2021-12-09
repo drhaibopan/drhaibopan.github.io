@@ -10,7 +10,7 @@ output:
     self-contained: ture
 ---
 
-class: middle, inverse
+class: middle, inverse, nh1
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -37,7 +37,8 @@ xaringanExtra::use_fit_screen()
 xaringanExtra::use_progress_bar(color = "darkred", location = "top")
 ```
 
-# <font color = "Gold">Chapter 1 Introduction</font>
+# Chapter 1 Introduction 
+
  <font size = 6>Haibo Pan</font> <br>
  <font size = 5>Dec-9, 2021</font>
 
@@ -51,13 +52,13 @@ layout:true
 
 
 ---
-class: inverse
+class:
 
 # Outline 
 .panelset.sideways[
 .panel[ .panel-name[Agenda]
 
-<font color ='gold'> Week1:  R Essentials</font>
+**Week1:  R Essentials**
 
 Week2:  R and Data Manipulation
 
@@ -95,31 +96,35 @@ ILO5: Present Data Results by R
 
 .panel[ .panel-name[Evaluation]
 
-- Coming Soon
+- In-class Participation (20%)
+
+- Individual Project (30%)
+
+- Final Examination (50%)
 
 ]
 
 .panel[ .panel-name[Requirements]
-
-- No Noise in the Class
-]
-
-]
----
-class: middle, center
-
-.left-column[
-
-### R Essentials
-
-]
-.right-column[
-## What's R?
+ <br>
+ ### No Noise in the Class!
  
-## Why R?
+]
+]
 
+---
+class: middle, inverse
 
-## How to Learn R?
+.pull-left[
+
+## R Essentials
+
+]
+.pull-right[
+# **What's R?**
+
+# **Why R?**
+
+# **How to Learn R?**
 ]
 
 ---
@@ -144,47 +149,222 @@ class: middle, center
 .pull-left[
 ![Robert Gentleman](r01_appx/RobertGentleman.jpg)
 
-A **Canadian** statistician and bioinformatician (***born 1959***), currently vice president of computational biology at 23andMe.
+**Robert Gentleman** (born 1959)
+> A **Canadian** statistician and bioinformatician, currently vice president of computational biology at 23andMe.
 ]
 
 .pull-right[
 ![Ross Ihaka](r01_appx/RossIhaka.jpg)
 
-A **New Zealand** statistician (***born 1954***). He was an Associate Professor of Statistics at the University of Auckland until his retirement in 2017.
+**Ross Ihaka**(born 1954)
+> A **New Zealand** statistician. He was an Associate Professor of Statistics at the University of Auckland until his retirement in 2017.
+
 ]
 ]
 ]
+
 ---
 # Why R?
+
+Three things primarily attracted me to R
+
+- The easy-to-understand and use syntax 
+
+- The incredible RStudio tool
+
+- R Packages !!!
+
+---
+
+.panelset[
+.panel[.panel-name[Pros and Cons]
+.pull-left[
+## Pros:
+- Free !!!
+
+- Open source
+
+- Small size
+
+- Write your own packages !!!
+]
+
+.pull-right[
+## Cons:
+- Steep Learning Curve
+]
+]
+
+.panel[.panel-name[R VS Stata,SPSS,Mplus,SAS]
+
+- To some extent, **R** is like a ***mini OS*** and **Stata**, **SPSS**, **Mplus**, and **SAS** are like a collection of “packages” on the platform. 
+
+<br>
+
+- Technically, **R** can do everything **Stata**, **SPSS**, **Mplus** and **SAS** can do, but the later cannot do everything R can do !
+
+]
+
+.panel[.panel-name[R VS python]
+
+- Both are free and open source.
+
+- Both are more likely mini operation systems. 
+
+> In some specific fields, they are interchangeable. However,  **R** is more friendly to statisticians whereas **Python** is more friendly to data scientist !
+
+]
+]
+
+--
 
 
 
 
 ---
 # How to Learn R
-.panelset[.panel[.panel-name[Introduction]
+.panelset[.panel[.panel-name[Hot Tips]
 
-- install R and RStudio
+- Clarify your purpose before starting R
 
-- by projects
+- Following a textbook or tutorial to familiarize R and RStudio
 
-- use ***help*** function and ***help**** documents
+- Practice R with your projects by RStudio
 
-- use ***google*** or ***bing***
+- **Google** or **Bing** your questions when you are in trouble
+
+- Use ***?*** function and **[help](https://www.rdocumentation.org)** documents when you forget the functions
 
 ]
 .panel[.panel-name[RStudio]
 
+- RStudio is an integrated development environment (**IDE**) for R. 
+> **IDE** seems a little like a theme on computers or phones.
+
+<br>
+#### You can treat RStudio as a more friendly graphical user interface (**GUI**) than default GUI for us! 
+
 ]
 .panel[.panel-name[R Packages]
+
+To some extent, **R** is more like a mini operating system (**OS**) rather than just an applied software. 
+
+- In **R**, we use different packages to solve different problems. 
+Here **packages** are like applied software on other OSs (e.g., Windows/MacOS/Linux )
+
+- Different packages in **R** sometimes can solve the same problem. 
+> For instance, ***tidyverse*** and ***data.table*** are both excellent packages for data manipulation. 
+> - They are written by different authors but solve the same problem by different logic. 
+> - The differences are a little like the differences among Microsoft Word and Google Doc. 
+> - You can choose either just by your preference!
 
 ]
 
 .panel[.panel-name[R Markdown]
 
+**R Markdown** is a file format for making dynamic documents with **R**.
+
+- **R Markdown** can hep you report the results of data analysis
+
+- **R Markdown** can help you present the results of data analysis
+
+- **R Markdown** can help you write academic paper
+
+
 ]
 ]
 
 ---
+## Reference for Learning R
 
-## Learnning Resources 
+.panelset[
+.panel[.panel-name[General]
+-  [R Fun](https://rfun.library.duke.edu)
+
+-   [R Teaching](https://education.rstudio.com/teach/tools/)
+
+-   [R Documentation](https://www.rdocumentation.org/?=ggplot&=%s)
+
+-   [What They Forget to Teach you about R](https://rstats.wtf)
+
+]
+.panel[.panel-name[R and Data Analysis]
+
+
+-  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
+
+-   [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
+
+-   [R Linear Regression Bayesian](https://www.rensvandeschoot.com/tutorials/r-linear-regression-bayesian-using-brms/)
+
+-   [Exploratory Data Analysis](https://edav.info/mosaic.html)
+
+]
+.panel[.panel-name[R Package Tutorials]
+
+.pull-left[
+-  [Xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html) for power point
+
+-  [Xaringan Extra](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
+
+-  [Xaringan Theme Generator](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)
+
+-  [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
+
+-  [FactoMineR](http://factominer.free.fr/factomethods/index.html) for factor analysis and clustering analysis
+
+-  [Factoextra](http://www.sthda.com/english/wiki/factoextra-r-package-easy-multivariate-data-analyses-and-elegant-visualization)
+]
+.pull-right[
+-  [lavaan](https://lavaan.ugent.be) for SEM
+
+-  [lme4](https://www.rensvandeschoot.com/tutorials/lme4/) for HLM
+
+-  [ggplot2](https://ggplot2-book.org) for figures
+
+-  [gt](https://gt.rstudio.com/articles/intro-creating-gt-tables.html) for tables
+
+-  [ggpubr](https://rpkgs.datanovia.com/ggpubr/index.html)
+
+-  [sjPlot](https://strengejacke.github.io/sjPlot/)
+
+-  [stargazer](https://www.princeton.edu/~otorres/NiceOutputR.pdf)
+]
+]
+.panel[.panel-name[R Markdown]
+-  [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
+
+-  [R Markdown for Scientists](https://rmd4sci.njtierney.com)
+
+- [R Blogdown](https://bookdown.org/yihui/blogdown/)
+
+-  [R Bookdown](https://bookdown.org/yihui/bookdown/)
+
+-  [CSS](https://www.w3schools.com/css/css_background.asp)
+
+-  [HTML](https://www.w3schools.com/html/html_intro.asp)
+]
+]
+
+---
+class: middle inverse nh1
+
+# R Download and Installation
+---
+class: middle
+
+## R download and installation
+
+https://mirror-hk.koddos.net/CRAN/
+
+## R Studio download and installation
+
+https://rstudio.com/products/rstudio/download/#download
+
+# R Package Download and Installation
+
+```{r eval=F}
+install.packages("data.table") # download and install the package
+library(data.table) # open the package
+```
+
