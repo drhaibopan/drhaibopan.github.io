@@ -8,4 +8,4 @@ date: 2021-12-08
    </body>
 </html>
 
-### [Week 1 R Essentials](https://rpubs.com/raymondpan/845144)
+### [Week 1 R Essentials](/slides/r01/r01_ch1_introduction_211204.html)

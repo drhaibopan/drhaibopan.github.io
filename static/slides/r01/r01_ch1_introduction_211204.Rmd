@@ -1,0 +1,124 @@
+---
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: [mydiy.css,uo-fonts]
+    nature:
+      slideNumberFormat: "%current%"
+      ratio: 16:9
+      countIncrementalSlides: true
+      titleSlideClass: ["left", "bottom", "my-title"]
+    self-contained: ture
+---
+class: left, bottom, bg1
+
+# <font color = "Gold">Chapter 1 Introduction</font>
+## <font color = "white">Haibo Pan</font>
+## <font color = "white" size = 5>Dec-9, 2021</font>
+
+---
+class: bg2
+layout:true
+<div class="footer">
+<span> 
+Copyright &copy 2021. Haibo Pan All rights reserved</span> 
+</div>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+
+```{r xaringanExtra, echo = FALSE}
+library(xaringanExtra)
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+xaringanExtra::use_search(show_icon = TRUE)
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_progress_bar(color = "darkred", location = "top")
+```
+
+---
+class: bg1
+
+## Outline 
+.panelset.sideways[
+.panel[ .panel-name[Agenda]
+
+- Week1.  R Essentials
+
+- Week2.  R and Data Manipulation
+
+- Week3.  R and Factor Analysis
+
+- Week4.  R and Clustering Analysis
+
+- Week5.  R and ANOVA
+
+- Week6.  R and Regression
+
+- Week7.  R and Probit Model
+
+- Week8.  R and Data Visualization
+
+- Week9.  R and Data Sharing and Presentation
+
+]
+
+.panel[ .panel-name[ILO]
+
+- Coming Soon
+]
+
+.panel[ .panel-name[Evaluation]
+
+- Coming Soon
+
+]
+
+.panel[ .panel-name[Requirements]
+
+- Coming Soon
+]
+
+]
+---
+class: center
+
+## What's R 
+
+
+
+---
+## What's RStudio
+
+
+
+---
+## What's Packages
+
+
+---
+## What can R do?
+
+---
+## R Versus Other Softwares
+
+---
+
+## How to Learn R
+
+
+---
+
+## Learnning Resources 
