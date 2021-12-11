@@ -37,6 +37,7 @@ xaringanExtra::use_panelset()
 xaringanExtra::use_search(show_icon = TRUE)
 xaringanExtra::use_fit_screen()
 xaringanExtra::use_progress_bar(color = "darkred", location = "top")
+xaringanExtra::style_panelset_tabs(foreground = "darkred")
 ```
 
 # Chapter 1 Introduction 
