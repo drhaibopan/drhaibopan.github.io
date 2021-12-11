@@ -11,7 +11,7 @@ date: 2021-12-01
 </body>
 </html>
 
-## <font color = 'darkred'> Education </font>
+## <font color = 'black'> Education </font>
 
 > **Doctor of Philosophy in Marketing**, 2016.09-2022.01 <br> <font color ='teal'>City University of Hong Kong</font>, China <br><br>
 >
@@ -19,13 +19,13 @@ date: 2021-12-01
 >
 > **Bachelor of Management in Marketing**, 2006.09-2010.07 <br> <font color ='teal'>Harbin Institute of Technology</font>, China
 
-## <font color = 'darkred'> Research Interests </font>
+## <font color = 'black'> Research Interests </font>
 
 > **Channel Governance** <br> With emphasis on <font color ='teal'>Franchising</font>, <font color ='teal'>Agency Theory</font>, and <font color ='teal'>Institutional Theory</font> <br> <br>
 >
 > **Social Identity Theory**<br> With emphasis on <font color ='teal'>Consumer Behaviors</font> and <font color ='teal'>Marketing Strategy</font>
 
-## <font color = 'darkred'>Teaching Interests</font>
+## <font color = 'black'>Teaching Interests</font>
 
 > R and Business Analysis <br>
 >
@@ -35,7 +35,7 @@ date: 2021-12-01
 >
 > Branding Managment
 
-## <font color = 'brown'>Ongoing Projects</font>
+## <font color = 'black'>Ongoing Projects</font>
 
 > **Pan, Haibo**, and Xu Zheng (2021), "Franchisee Configuration and Franchisee Failure: The Role of Intra- and Inter-Brand Competition", <font color ='teal'>Manuscript Preparation for <i>Journal of Marketing Research</i></font>. <br> <br>
 >

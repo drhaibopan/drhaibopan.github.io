@@ -5,7 +5,7 @@ date: 2021-12-07
 
 ***Here are my favorite websites***
 
-## <font color= "darkred"> General </font>
+## <font color= "black"> General </font>
 
 1.  [Google Scholar](https://scholar.google.com)
 
@@ -25,7 +25,7 @@ date: 2021-12-07
 
 9.  [ABS Jounal List 2021](https://www.researchgate.net/publication/352767191_Academic_Journal_Guide_2021_It_was_earlier_ABS_2021_Ranking_list)
 
-## <font color= "darkred"> Toolkits </font>
+## <font color= "black"> Toolkits </font>
 
 1.  [Zotero](https://www.zotero.org)
 2.  [Zettr](https://www.zettlr.com)
@@ -34,7 +34,7 @@ date: 2021-12-07
 5.  [Net News Wire](https://netnewswire.com): RSS Reader
 6.  [Blender](https://www.blender.org)
 
-## <font color= "darkred"> Online Database </font>
+## <font color= "black"> Online Database </font>
 
 1.  [50+ free Datasets for Data Science Projects](https://blog.journeyofanalytics.com/50-free-datasets-for-data-science-projects/)
 
@@ -42,7 +42,7 @@ date: 2021-12-07
 
 3.  [Chinese Industry Report Search](http://report.seedsufe.com/index)
 
-## <font color= "darkred"> R Learning </font> {.tabset}
+## <font color= "black"> R Learning </font> {.tabset}
 
 1.  [R Fun](https://rfun.library.duke.edu)
 
@@ -52,7 +52,7 @@ date: 2021-12-07
 
 4.  [What They Forget to Teach you about R](https://rstats.wtf)
 
-### R and Analysis Techniques
+### <font color = "gray"> R and Analysis Techniques</font>
 
 5.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
 
@@ -62,7 +62,7 @@ date: 2021-12-07
 
 8.  [Exploratory Data Analysis](https://edav.info/mosaic.html)
 
-### R Packages
+### <font color = "gray">R Packages</font>
 
 11. [Xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html) for power point
 
@@ -90,7 +90,7 @@ date: 2021-12-07
 
 23. [stargazer](https://www.princeton.edu/~otorres/NiceOutputR.pdf)
 
-### R Markdown
+### <font color = "gray">R Markdown</font>
 
 24. [R Markdown](https://bookdown.org/yihui/rmarkdown/yihui-xie.html)
 
@@ -104,20 +104,20 @@ date: 2021-12-07
 
 29. [HTML](https://www.w3schools.com/html/html_intro.asp)
 
-## <font color= "darkred"> Data Analysis Learning </font>
+## <font color= "black"> Data Analysis Learning </font>
 
 1.  [QCA](https://www.bilibili.com/video/BV1nh411k7o4?p=1)
 2.  [Interpreting interaction effect](http://www.jeremydawson.com/slopes.htm)
 3.  [P Value](http://p-curve.com)
 4.  [Survial Analysis](https://www.rensvandeschoot.com/tutorials/discrete-time-survival/)
 
-## <font color= "darkred"> Theory Learning </font>
+## <font color= "black"> Theory Learning </font>
 
 1.  [IS Theory](https://is.theorizeit.org/wiki/Main_Page)
 
 2.  [Management Scales](https://en.wikibooks.org/wiki/Handbook_of_Management_Scales#I)
 
-## <font color= "darkred"> Image Search </font>
+## <font color= "black"> Image Search </font>
 
 1.  [Logo Search](http://instantlogosearch.com)
 
