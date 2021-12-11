@@ -19,8 +19,8 @@ draft: false
 
 ## <font color = 'darkred'>Conference Papers</font>
 
-1.  **Pan, Haibo**, and Xu Zheng (2018), "Optimizing the Impact of Franchisor Plural Governance on Franchisee Performance: The Moderating Roles of System Size and Regulatory Environment," <font color ='teal'><b><i>Paper Presented at 2018 Summer AMA Conference</i></b></font>, Boston (August 10-12) <br><br>
+1.  **Pan, Haibo**, and Xu Zheng (2018), "Optimizing the Impact of Franchisor Plural Governance on Franchisee Performance: The Moderating Roles of System Size and Regulatory Environment," <font color ='teal'><i>Paper Presented at 2018 Summer AMA Conference</i></font>, Boston (August 10-12) <br><br>
 
-2.  Ji, Li, Xu Zheng, and **Haibo Pan** (2017), "Regional Clustering, Matching Governance Mechanisms, and Performance Implications in Franchising," <font color ='teal'><b><i>Paper Presented at 2017 Winter AMA Conference</i></b></font>, Orlando (February 17-19) <br><br>
+2.  Ji, Li, Xu Zheng, and **Haibo Pan** (2017), "Regional Clustering, Matching Governance Mechanisms, and Performance Implications in Franchising," <font color ='teal'><i>Paper Presented at 2017 Winter AMA Conference</i></font>, Orlando (February 17-19) <br><br>
 
-3.  Zhou, Mingjian, and **Haibo Pan** (2013), "Different Paths Different Effects: Testing the Relationship Between Team Task Conflict and Team Creativity", <font color ='teal'><b><i>In the 19th International Conference on Industrial Engineering and Engineering Management</i></b></font>, 683-690, Springer Berlin Heidelberg.
+3.  Zhou, Mingjian, and **Haibo Pan** (2013), "Different Paths Different Effects: Testing the Relationship Between Team Task Conflict and Team Creativity", <font color ='teal'><i>In the 19th International Conference on Industrial Engineering and Engineering Management</i></font>, 683-690, Springer Berlin Heidelberg.
