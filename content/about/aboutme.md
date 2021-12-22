@@ -13,7 +13,7 @@ date: 2021-12-01
 
 ## <font color = 'black'> Education </font>
 
-> **Doctor of Philosophy in Marketing**, 2016.09-2022.01 <br> <font color ='teal'>City University of Hong Kong</font>, China <br><br>
+> **Doctor of Philosophy in Marketing**, 2016.09-2022.02 <br> <font color ='teal'>City University of Hong Kong</font>, China <br><br>
 >
 > **Master of Management in Business Administration**, 2010.09-2013.01<br><font color ='teal'>Harbin Institute of Technology</font>, China <br><br>
 >
