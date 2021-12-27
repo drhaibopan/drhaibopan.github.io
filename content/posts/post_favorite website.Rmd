@@ -9,7 +9,7 @@ date: 2021-12-25
 
 1.  [Google Scholar](https://scholar.google.com)
 
-2.  [Connected Paper](https://www.connectedpapers.com): paper network
+2.  [Connected Paper](https://www.connectedpapers.com)
 
 3.  [AMiner](https://www.aminer.org)
 
