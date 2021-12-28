@@ -9,26 +9,28 @@ date: 2021-12-25
 
 1.  [Google Scholar](https://scholar.google.com)
 
-2.  [Connected Paper](https://www.connectedpapers.com)
+2.  [Connected Paper](https://www.connectedpapers.com): Paper Network
 
-3.  [AMiner](https://www.aminer.org)
+3.  [AMiner](https://www.aminer.org): Paper Network
 
-4.  [Library Genesis](http://libgen.rs)
+4.  [Library Genesis](http://libgen.rs): Textbook Download
 
-5.  [Cloud Research](https://www.cloudresearch.com)
+5.  [ZLibrary](https://hk1lib.org): e-book download
 
-6.  [Scribbr](https://www.scribbr.com)
+6.  [Cloud Research](https://www.cloudresearch.com): Online Experiment/Survey Platform
 
-7.  [UTD 24 Journal List](https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/)
+7.  [Scribbr](https://www.scribbr.com): Online Copy Editing Service
 
-8.  [FT 50 Journal List](https://www.ft.com/content/3405a512-5cbb-11e1-8f1f-00144feabdc0)
+8.  [UTD 24 Journal List](https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/)
 
-9.  [ABS Jounal List 2021](https://www.researchgate.net/publication/352767191_Academic_Journal_Guide_2021_It_was_earlier_ABS_2021_Ranking_list)
+9.  [FT 50 Journal List](https://www.ft.com/content/3405a512-5cbb-11e1-8f1f-00144feabdc0)
+
+10. [ABS Jounal List 2021](https://www.researchgate.net/publication/352767191_Academic_Journal_Guide_2021_It_was_earlier_ABS_2021_Ranking_list)
 
 ## <font color= "black"> Toolkits </font>
 
-1.  [Zotero](https://www.zotero.org)
-2.  [Zettr](https://www.zettlr.com)
+1.  [Zotero](https://www.zotero.org): Literature Management
+2.  [Zettr](https://www.zettlr.com): Academic Markdown
 3.  [RStudio](https://www.rstudio.com)
 4.  [OBS Studio](https://obsproject.com/zh-tw)
 5.  [Net News Wire](https://netnewswire.com): RSS Reader
