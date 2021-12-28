@@ -15,7 +15,7 @@ date: 2021-12-25
 
 4.  [Library Genesis](http://libgen.rs): Textbook Download
 
-5.  [ZLibrary](https://hk1lib.org): e-book download
+5.  [ZLibrary](https://hk1lib.org): E-book Download
 
 6.  [Cloud Research](https://www.cloudresearch.com): Online Experiment/Survey Platform
 
