@@ -137,7 +137,7 @@ date: 2021-12-25
 
 2.  [HTML](https://www.w3schools.com/html/html_intro.asp)
 
-3.  [Color name](https://htmlcolorcodes.com/color-names/)
+3.  [Color Name](https://htmlcolorcodes.com/color-names/)
 
 4.  [Font Awesome](https://fontawesome.com)
 
