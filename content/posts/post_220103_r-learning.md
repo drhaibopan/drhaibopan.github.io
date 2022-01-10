@@ -68,3 +68,5 @@ date: 2022-01-03
 4.  [R Blogdown](https://bookdown.org/yihui/blogdown/)
 
 5.  [R Bookdown](https://bookdown.org/yihui/bookdown/)
+
+6.  [Greek Letters and Math Symbol](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols)
