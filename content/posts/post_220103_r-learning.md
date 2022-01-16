@@ -13,6 +13,12 @@ date: 2022-01-03
 
 4.  [What They Forget to Teach you about R](https://rstats.wtf)
 
+## <font color = "gray"> Statistics</font>
+
+1.  [Online Textbook on Statistics](https://www.stat.berkeley.edu/~stark/SticiGui/Text/toc.htm)
+
+2.  [Statistic Glossary](http://www.stats.gla.ac.uk/steps/glossary/index.html)
+
 ## <font color = "gray"> R and Analysis Techniques</font>
 
 1.  [Learning Statistics in R](https://ademos.people.uic.edu/index.html)
