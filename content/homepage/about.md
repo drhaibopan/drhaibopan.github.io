@@ -15,7 +15,7 @@ social:
     url: https://scholar.google.com/citations?user=KLlRqMUAAAAJ&hl=zh-CN
   - icon: address-card
     iconPack: fas 
-    url: /cv/cv_pan_211205.pdf
+    url: /cv/cv_raymondpan.pdf
   - icon: envelope
     iconPack: fas
     url: mailto:haibopan@outlook.com
