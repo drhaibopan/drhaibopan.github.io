@@ -11,7 +11,764 @@ output:
 knitr::opts_chunk$set(cache = TRUE)
 ```
 
+# Preparation
+
+## Environment Clearing
+
 ```{r}
-curve(sin(x))
+rm(list = ls())
 ```
+
+## Environment Checking
+
+```{r}
+sessionInfo()
+(.packages())
+version
+```
+
+# Enviroment Setting
+
+```{r packags-loading, warning=F, message=F,tidy=T}
+library(data.table)
+library(geosphere) # calculate the distance 
+library(MASS) # Modern Applied Statistics with S
+library(lmtest)
+library(car)
+library(plm)
+library(jtools)
+
+```
+
+```{r setup, echo=F}
+options(max.print=1000)
+knitr:: opts_chunk$set(fig.align = "center", tidy = T, warning = F,
+                     message = F, comment = NA)
+set_theme(base = theme_bw(base_family = "Times New Roman", base_size = 12),
+        axis.textcolor = "black")
+ 
+
+```
+
+# 1. Data Preparation
+
+## 1.1 Data Import
+
+```{r}
+e2.arch <- fread(here("diss_data","diss_e2_arch_fin_211025.csv"))  
+```
+
+## 1.2 Sample Selection
+
+```{r}
+e2.arch |> view_df(show.type = T, show.na = T, show.frq = T)
+e2.arch <- e2.arch[year < 2013,]
+e2.arch <- e2.arch[, ads := ifelse(ads ==0, NA, ads)]
+
+# delete cases with only 2 FDDs (i.e., only 6 year data)
+e2.arch |> colnames()
+e2.arch |> setkey(mid)
+e2.arch <- e2.arch[!.(c(193,316,400,50,229,252))]  #default 252, now 183 
+```
+
+## 1.3 Variable Creation
+
+```{r dv}
+e2.arch |> setorder(mid, year)
+# log total revenue and then lag it as DV
+e2.arch[, totrev_log := log(totrev +1)]
+e2.arch[, totrev_log_lead := shift(totrev_log, -1), by=mid]
+e2.arch[, totrev_log_lag := shift(totrev_log, 1), by=mid]
+```
+
+```{r iv}
+e2.arch[, ads2 := ifelse(is.na(ads),adsmkt,ads)]
+e2.arch[, ads2_lag :=shift(ads2,1),by="mid"]
+e2.arch[, ads2_lag2 :=shift(ads2,2),by="mid"]
+e2.arch[, ads2_lag3 :=shift(ads2,3),by="mid"]
+e2.arch[, ads2_mean :=rowMeans(e2.arch[,.(ads2,ads2_lag)],na.rm=T)]
+e2.arch[, ads2_mean := ifelse(is.nan(ads2_mean),NA, ads2_mean)]
+e2.arch[, ads2_mean_log := ifelse(is.na(ads2_mean),NA, log(ads2_mean))]
+
+e2.arch[, ads2_mean2 :=rowMeans(e2.arch[,.(ads2,ads2_lag,ads2_lag2)],na.rm=T)]
+e2.arch[, ads2_mean2 := ifelse(is.nan(ads2_mean2),NA, ads2_mean2)]
+e2.arch[, ads2_mean2_log := ifelse(is.na(ads2_mean2),NA, log(ads2_mean2))]
+
+e2.arch[, ads2_log := ifelse(is.na(ads2),NA, log(ads2+1))]
+e2.arch[, ads2_log_lag :=shift(ads2,1),by="mid"]
+e2.arch[, ads2_log_lag2 :=shift(ads2,2),by="mid"]
+e2.arch[, ads2_log_lag3 :=shift(ads2,3),by="mid"]
+```
+
+```{r moderators}
+# Moderator 1 : Franchisee Proportion
+e2.arch[, pof := ifelse(is.na(tend), NA, round(fend/tend,3))]
+e2.arch[, pof_log :=log(pof +1)]
+
+#  Moderator 2: Franchisee Dispersion
+e2.arch[, tend_nstate_log := round(log(tend_nstate),3)]
+e2.arch[, fend_nstate_log := round(log(fend_nstate+1),3)]
+```
+
+```{r controls}
+### * Control variables -------------------------------------------------
+e2.arch[, `:=`(age= year-eyear, exp =year-fyear)]  # age 
+e2.arch[, `:=`(age= ifelse(age<0,0,age), exp=ifelse(exp<0,0,exp))] # experience
+e2.arch[, `:=` (age_log = log(age +1), exp_log =log(exp +1))]
+
+e2.arch[, tend_log := round(log(tend +1),3)] # system size
+e2.arch[, totass_log :=log(totass+1)] # system size 
+
+e2.arch[, tend_density_log := round(log(tend_density+1),3)] # system density 
+
+e2.arch[, train := (train1+train2)/2] # system support: training
+e2.arch[, train_log := ifelse(train==0, 0, round(log(train+1),3))]
+
+e2.arch[, rratio := (rratio1+rratio2)/2] # royalty ratio
+
+e2.arch[, pgdp := ifelse(is.na(pop),NA, round(gdp/pop,3))] # per gdp and pop 
+e2.arch[, pgdp_log := ifelse(pgdp==0, 0, round(log(pgdp+1),3))]
+
+e2.arch[, pop_log := ifelse(pop==0, 0, round(log(pop+1),3))] # population 
+
+e2.arch[, iff := (iff1 + iff2)/2]
+e2.arch[, iff_log := ifelse(iff==0, 0, round(log(iff +1 ),3))]
+
+```
+
+## 1.4 Replacing missing value
+
+```{r missing}
+e2.arch |> setorder(mid, year)
+# the first non missing value replace
+e2.arch[,train := na.locf(train,na.rm=F), by="mid"] 
+# the last non missing value replace
+e2.arch[,train := na.locf(train,na.rm=F,fromLast =T), by="mid"] 
+
+# the first non missing value replace; locf--> location forward
+e2.arch[,train_log := na.locf(train_log,na.rm=F), by="mid"] 
+# the last non missing value replace
+e2.arch[,train_log := na.locf(train_log,na.rm=F,fromLast =T), by="mid"] 
+
+# the first non missing value replace
+e2.arch[,rratio := na.locf(rratio,na.rm=F), by="mid"] 
+# the last non missing value replace
+e2.arch[,rratio := na.locf(rratio,na.rm=F,fromLast =T), by="mid"] 
+
+# the first non missing value replace
+e2.arch[,iff_log := na.locf(iff_log,na.rm=F), by="mid"] 
+# the last non missing value replace
+e2.arch[,iff_log := na.locf(iff_log,na.rm=F,fromLast =T), by="mid"] 
+
+# the first non missing value replace
+e2.arch[,totass_log2 := na.locf(totass_log,na.rm=F), by="mid"] 
+# the last non missing value replace
+e2.arch[,totass_log2 := na.locf(totass_log,na.rm=F,fromLast =T), by="mid"] 
+
+```
+
+# 2. Sample Selection Bias Correction
+
+```{r}
+e2.arch[,.N/10, by=naics_2]  |>  
+  setorder(-V1,naics_2) |> 
+  tab_df()
+
+# delete the industry whose franchisors is less than 3
+e2.arch<- e2.arch[ !(naics_2 %in% c(52,49,71,62,53))]
+
+```
+
+## 2.1 Marking the franchisors without disclosure of ads
+
+```{r BiasMark}
+# calculate the number of franchisors that do not disclose ads at all. 
+e2.arch[, select1 := ifelse(is.na(ads2),0,1)]
+e2.arch[, select1_sum := sum(select1), by=c("mid")]
+
+e2.arch[select1_sum==0,.(naics_2,mid,franchisor)] |> 
+  unique() |> 
+  setorder(naics_2,mid) |> 
+  tab_df()
+
+# calculate the number of franchisors that do not use royalty ratio. 
+e2.arch[, select2 := ifelse(is.na(rratio),0,1)]
+e2.arch[, select2_sum := sum(select2), by=c("mid")]
+
+e2.arch[select2_sum==0,.(naics_2,mid,franchisor)] |> 
+  unique() |> 
+  setorder(naics_2,mid) |> 
+  tab_df()
+
+# mark the franchisors we choose in our sample
+e2.arch[, select := ifelse(select1_sum > 0 & select2_sum >0, 1,0)]
+e2.arch[,.N/10, by=select]
+e2.arch |> setorder(mid, year)
+```
+
+## 2.2 Heckman selection model to correct bias
+
+```{r BiasCorrection}
+# correct bias from advertisement spending 
+
+heckman.R<-e2.arch[complete.cases(e2.arch[,.(select,totass_log,iff_log, exp_log, 
+                                     naics_2,year)]),]
+
+heckman<- glm(select ~  totass_log + iff_log + exp_log +  factor(naics_2), 
+              family=binomial(link="probit"), data=heckman.R)
+
+heckman |> summary()
+tab_model(heckman)
+# Hosmer-Lemeshow Goodness of Fit
+hoslem.test(heckman.R$select, fitted(heckman))  
+
+# Likelihood ratio test
+lrtest(heckman)
+waldtest(heckman)
+
+# check multicollinearity 
+vif(heckman)
+
+# output result by beautiful table 
+stargazer(heckman, type="text", 
+          single.row= T, intercept.bottom = F) #show others
+tab_model(heckman)
+stargazer(heckman, type="html", 
+          out=here("diss_results","e2_arch_tab_01_211025.html"), 
+          single.row= T, intercept.bottom = F) #show others 
+
+# transfer IMR to dt2 
+heckman.R$IMR <- invMillsRatio(heckman,all=T )$IMR1
+IMR.R1 <- heckman.R[,.(mid,year,IMR)]
+e2.arch.IMR <-merge(e2.arch, IMR.R1,by=c("mid","year"), all=T)
+
+# select the mid who at least reported advertising spending once 
+is.pbalanced(e2.arch.IMR)
+e2.arch.IMR |> setorder(mid, year)
+e2.arch.IMR <- e2.arch.IMR[select1_sum >0 & select2_sum>0,]
+```
+
+## 2.3 Final Data for Regression
+
+```{r IMRData}
+# delete the industry whose number is less than 3 
+
+temp.industry <- e2.arch.IMR[,.(mid,naics_2)] |>  unique() 
+temp.industry[, .N, by= "naics_2"] |> 
+  setorder(-N, naics_2) |> 
+  tab_df()
+
+e2.arch.IMR <- e2.arch.IMR[(naics_2 %in% c(72,54,61,81,56,44,45))] 
+e2.arch.IMR |> setorder(mid, year)
+```
+
+# 3. Model Free Testing
+
+```{r FinData}
+e2.arch.IMR[, `:=`(SP = totrev_log,
+                   AS = ads2_mean_log,
+                   FP = pof,
+                   FD = fend_nstate_log,
+                   SIZE = tend_log,
+                   RR = rratio,
+                   SUPPORT = train_log,
+                   AGE = age_log,
+                   POP = pop_log,
+                   PGDP = pgdp_log,
+                   AS2 = ads2_log,
+                   AS3 = ads2_mean2_log)]
+
+dv <- c("SP")
+iv <- c("AS", "FP", "FD")
+cv <- c("SIZE", "RR", "SUPPORT", 
+        "AGE", "POP", 
+        "PGDP","IMR")
+e2.arch.fin <- e2.arch.IMR[, .SD, .SDcols =
+                             c("mid","year","naics_2",dv,iv,cv,"AS2","AS3")]
+
+```
+
+## 3.1 Sample Description
+
+```{r }
+# display mid, franchisor name, and year 
+e2.arch.IMR[,.(naics_2, mid, franchisor)] |> 
+  unique() |> 
+  setorder(naics_2) |> 
+  tab_df()
+
+e2.arch.IMR[, .N/10, by = "naics_2"] |> 
+  tab_df()
+
+e2.arch.IMR |> 
+  view_df(show.type = T, show.na = T, show.frq = T)
+```
+
+```{r franchisor-info}
+colnames(e2.arch.IMR)
+# establish year, franchising year, outlets, nstate, aderversing spending, codes, sales performance, names,
+
+
+FrInfo <- e2.arch.IMR[,list("Franchisor" =unique(franchisor),
+                        "Year_a" = unique(eyear),
+                        "Year_b" = unique(fyear),
+                        "Outlets_M" = round(mean(tend,na.rm=T),0),
+                        "AS_M" = round(mean(ads2, na.rm=T),0),
+                        "Sales" =round(mean(totrev,na.rm=T),0),
+                        "FP" = round(mean(pof, na.rm=T),2),
+                        "FD" = round(mean(fend_nstate,na.rm =T),0),
+                        "Code" = unique(naics_2)),
+                  by = c("mid")]|> 
+     setnames("mid", "MatchID") |> 
+     setorder(Code, MatchID)
+
+FrInfo[2,2] <- "Moe's Southwest Grill"
+
+FrInfo |> tab_df(title = "Franchisor Description (2003-2012)",
+                 footnote = "Note: M denotes 'Mean value between 2003-2012 nationwide'",
+                 show.footnote = T,
+                 file= here("diss_results","appx_e2_FranchisorInfo_fin_211025.html") )     
+```
+
+## 3.2 Visual Exploration
+
+```{r }
+## 3.2 Explore DV and IV by visualization ---- 
+e2.arch.fin |> ggscatterhist(x= "AS", y="SP")
+e2.arch.fin |> ggscatterhist(x= "FP", y="SP")
+e2.arch.fin |> ggscatterhist(x= "FD", y="SP")
+```
+
+## 3.3 Correlation
+
+```{r }
+e2.arch.fin[, -c("mid", "year", "naics_2","AS2","AS3")] |> 
+  describe() |> 
+  as.data.table(keep.rownames = T) -> cor.R
+
+cor.R[,c(1,3,4,5)] |> 
+  tab_df(digits =3,
+         file = here("diss_results","e2_arch_tab_02a_fin_211025.html"))
+
+
+e2.arch.fin[, -c("mid", "year", "naics_2","AS2","AS3")] |> 
+  tab_corr(triangle = "lower", 
+           p.numeric = F, digits = 2, 
+           file = here("diss_results","e2_arch_tab_02b_fin_211025.html"))
+
+e2.arch.fin[, -c("mid", "year", "naics_2","AS2","AS3")] |> sjp.corr()
+```
+
+# 4. Hypotheses Testing
+
+```{r}
+# Part 4. Confirmatory Data Analysis ------------------------------------------------
+e2.arch.fin |> is.pbalanced() # TRUE
+e2.arch.fin |> setorder(mid, year)
+```
+
+## 4.1 Enodeneity Check
+
+```{r endogeneity-test}
+ols<-formula(SP ~ AS + FP + FD
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2))
+
+ols2<-formula(SP ~ AS   + FP + FD
+              + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+              + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+              + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+              + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+              + AGE
+              + SUPPORT
+              + RR
+              + POP  
+              + PGDP
+              + IMR 
+              + factor(naics_2) 
+              + factor(year))
+pool<-plm(ols, data = e2.arch.fin, index=c("mid","year"), model = "pooling")
+
+pool |> summary()
+
+plmtest(pool,type=c("bp"))  #there is random effect exists.
+
+# fixed effect model 
+fixed<-plm(ols, data=e2.arch.fin, index=c("mid","year"), model = "within")
+summary(fixed)
+
+fixed.time<-plm(ols2, data=e2.arch.fin, index=c("mid","year"), model = "within")
+summary(fixed.time)
+
+# random effect model 
+random<-plm(ols, data=e2.arch.fin, index=c("mid","year"), model = "random")
+summary(random)
+
+random.time <-plm(ols2, data=e2.arch.fin, index=c("mid","year"), model = "random")
+summary(random.time)
+
+
+# Hasman test 
+phtest(fixed, pool) # fixed is better than pool
+phtest(fixed, random) # fixed is better than random
+phtest(fixed.time,random) # show that fixed model is good.
+phtest(fixed.time,random.time) # show that fixed model is good.
+
+
+# Test time effect 
+
+pFtest(fixed.time, fixed) # no time-fixed effect.
+plmtest(fixed, c("time"), type=("bp")) # no time-fixed effect.
+```
+
+```{r root-test}
+# test root 
+panel.set <- pdata.frame(e2.arch.fin[complete.cases(e2.arch.fin)],c("mid","year"))
+adf.test(panel.set$SP, k=2)  # no unit root. Stationary
+```
+
+```{r heteroschedasticity-test}
+# test heterogeneity
+bptest(SP ~ AS + FP + FD
+       + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+       + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+       + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+       + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+       + AGE
+       + SUPPORT
+       + RR
+       + POP  
+       + PGDP
+       + IMR 
+       + factor(naics_2)
+       + factor(mid), data =e2.arch.fin,studentize = F)
+
+# correct heterogeneity 
+# coeftest(ht11)
+coeftest(fixed, vcovHC(fixed, method = "arellano"))
+coeftest(fixed, vcovHC(fixed, type = "HC3"))
+```
+
+## 4.2 Hausman-Taylor Instrument Variable (HTIV) Regression
+
+```{r htiv-output}
+## 4.2 HTIV regression -----
+m11<-formula(SP ~  #AS  
+            # + FP + FD
+            # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+            # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  #AS + FP + FD 
+               I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + SUPPORT + RR 
+             #+ I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             #+ I(scale(e2.arch.fin$AS)* scale(e2.arch.fin$FD))
+)
+
+
+ht11<-plm(m11, e2.arch.fin, index=c("mid","year"),random.method="ht", model="random", inst.method = "baltagi")
+
+# fwrite(data.table(round(summary(ht11,digit=3)$coefficients,3),keep.rownames = T),"ht11_coefficient.csv")
+
+m12<-formula(SP ~  AS  
+             #+ FP + FD
+            # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+            # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  AS #+ FP + FD 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + SUPPORT + RR 
+            # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+            # + I(scale(e2.arch.fin$AS)* scale(e2.arch.fin$FD))
+)
+
+
+ht12<-plm(m12, e2.arch.fin, index=c("mid","year"),random.method="ht", model="random", inst.method = "baltagi")
+
+m13<-formula(SP ~  AS  
+             + FP #+ FD
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+            # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  AS + FP #+ FD 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + SUPPORT + RR 
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+            # + I(scale(e2.arch.fin$AS)* scale(e2.arch.fin$FD))
+)
+
+
+ht13<-plm(m13, e2.arch.fin, index=c("mid","year"),random.method="ht", model="random", inst.method = "baltagi")
+
+m14<-formula(SP ~  AS  
+             #+ FP 
+             + FD
+             #+ I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  AS + FD #+ FP 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + SUPPORT + RR 
+             # + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS)* scale(e2.arch.fin$FD))
+)
+
+ht14<-plm(m14, e2.arch.fin, index=c("mid","year"),random.method="ht", model="random", inst.method = "baltagi")
+
+m15<-formula(SP ~  AS  
+             + FP + FD
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  AS + FP + FD 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + SUPPORT + RR 
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS)* scale(e2.arch.fin$FD))
+)
+
+
+ht15<-plm(m15, e2.arch.fin, index=c("mid","year"),random.method="ht", model="random", inst.method = "baltagi")
+
+# regression table 
+stargazer(ht11,ht12,ht13,ht14,ht15, type="html", 
+          out=here("diss_results","e2_arch_tab_03_211025.html"), 
+          single.row= T, intercept.bottom = F) #show others
+```
+
+```{r interaction-plot}
+# interaction follow this website http://www.jeremydawson.com/slopes.htm 
+interaction <-  psych:: describe(e2.arch.fin[,.(AS, FP, FD)]) |>  
+  as.data.frame()  |> 
+  round(3) |> setDT(keep.rownames = T)
+
+interaction <- interaction[,`:=`(low=mean -sd, high = mean+sd)][,
+                                                .(rn,mean,sd,min, max, low, high) ]
+interaction |> tab_df()
+
+vcov<-vcov(ht15)[c(1:6),c(1:6)]
+vcov<-round(vcov,6)
+rownames(vcov)<-c("intercept","AS","FP","FD","AS_FP","AS_FD")
+colnames(vcov)<-c("intercept","AS","FP","FD","AS_FP","AS_FD")
+vcov["AS","AS"]
+vcov["AS_FP","AS_FP"]
+vcov["AS","AS_FP"]
+vcov["AS_FD","AS_FD"]
+vcov["AS","AS_FD"]
+vcov(ht15)[c(1:6),c(1:6)] |> 
+  as.data.table(keep.rownames = T) |> 
+  tab_df(digits = 3)
+vcov |> tab_df()
+```
+
+```{r PostHoc-test}
+# post-hoc test 
+car::vif(ht15) # multicollinearity 
+ht15 |> resid() |> 
+  density() |> 
+  plot()
+
+ht15 |> resid() |> shapiro.test()
+shapiro.test(rnorm(100, mean = 100, sd = 3))
+```
+
+## 4.3 Robustness Check
+
+```{r alternative-measurement}
+## 4.4 robustness check ######
+# robust check: why correlation the sign between correlation and coefficeint is inconsistent. 
+# method 1: use ads2_log and ads2_mean2_log
+
+r11<-formula(SP ~  AS2 
+             + FP + FD
+             + I(scale(e2.arch.fin$AS2) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS2) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  AS2 + FP + FD 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + SUPPORT + RR
+             + I(scale(e2.arch.fin$AS2) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS2)* scale(e2.arch.fin$FD))
+)
+r11<-plm(r11, e2.arch.fin, index=c("mid","year"),random.method="ht", 
+         model="random", inst.method = "baltagi")
+vif(r11)
+
+r12<-formula(SP ~  AS3 
+             + FP + FD
+             + I(scale(e2.arch.fin$AS3) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS3) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year) 
+             | factor(naics_2) 
+             + factor(year)
+             + POP 
+             + PGDP
+             + AGE
+             + IMR 
+             |  AS3  + FP + FD 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2) 
+             + SUPPORT + RR
+             + I(scale(e2.arch.fin$AS3 ) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS3 )* scale(e2.arch.fin$FD))
+)
+
+r12<-plm(r12, e2.arch.fin, index=c("mid","year"),random.method="ht", 
+         model="random", inst.method = "baltagi")
+vif(r12)
+```
+
+```{r alternative-estimators}
+# method 2 using althernative estimators 
+r13<-formula(SP ~  AS  
+             + FP + FD
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+             + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+             + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+             + AGE
+             + SUPPORT
+             + RR
+             + POP  
+             + PGDP
+             + IMR 
+             + factor(naics_2) + factor(year)) 
+
+r13<-plm(r13, data=e2.arch.fin, index=c("mid","year"), model = "within")
+summary(r13)
+
+bptest(SP ~  AS  
+       + FP + FD
+       + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FP)) 
+       + I(scale(e2.arch.fin$AS) * scale(e2.arch.fin$FD))
+       + I(scale(e2.arch.fin$SIZE, center = T, scale = F)) 
+       + I(scale(e2.arch.fin$SIZE, center = T, scale = F)^2)
+       + AGE
+       + SUPPORT
+       + RR
+       + POP  
+       + PGDP
+       + IMR 
+       + factor(naics_2) + factor(year), data =e2.arch.fin,studentize = F)
+
+# correct heterogeneity 
+coeftest(r13)
+coeftest(r13, vcovHC(fixed, method = "arellano"))
+coeftest(r13, vcovHC(fixed, type = "HC3"))
+```
+
+```{r robustness-output}
+# robustness table 
+stargazer(r11,r12,r13, type="html", 
+          out=here("diss_results","e2_arch_tab_04_211025.html"), 
+          single.row= T, intercept.bottom = F) #show others 
+```
+
 

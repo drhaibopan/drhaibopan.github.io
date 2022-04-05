@@ -1,0 +1,12 @@
+---
+title: "An Example of Data Analysis by R"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+    highlight: kate
+---
+
+```{r}
+curve(sin(x))
+```
+
