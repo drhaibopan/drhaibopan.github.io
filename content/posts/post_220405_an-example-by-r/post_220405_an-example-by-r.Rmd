@@ -1,0 +1,17 @@
+---
+title: "An Example of Data Analysis by R"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+    highlight: kate
+---
+
+```{r setup, include=FALSE}
+## Global options
+knitr::opts_chunk$set(cache = TRUE)
+```
+
+```{r}
+curve(sin(x))
+```
+
