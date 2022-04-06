@@ -8,7 +8,7 @@ date: 2022-04-07
    </body>
 </html>
 
-### [Week 1 Introduction](/slides/r02/HSUHK_haibo_220407.pptx)
+### Week 1 Introduction
 
-#### [an example](/slides/r02/example_hsuhk_220405.html)
+
 
