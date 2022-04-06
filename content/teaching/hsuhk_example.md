@@ -1,10 +1,9 @@
 ---
 title: "An Example of Data Analysis by R"
 date: "2022-04-07"
-author: Haibo Raymond Pan
 output:
   blogdown::html_page:
-    toc: yes
+    toc: true
 ---
 
 # 1. Environment Preparation
@@ -578,14 +577,14 @@ fdt[, -c("mid", "year", "naics_2", "franchisor")] |>
 fdt |> ggscatterhist(x= "AS", y="SP")
 ```
 
-<img src="/teaching/crs_r_an-example_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
+<img src="/teaching/hsuhk_example_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 ## the correlation figure
 fdt[, -c("mid", "year", "naics_2","franchisor")] |> sjp.corr()
 ```
 
-<img src="/teaching/crs_r_an-example_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" />
+<img src="/teaching/hsuhk_example_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 ## the correlation table
@@ -1027,5 +1026,5 @@ fd_melt |>
            panel.grid = element_blank()) 
 ```
 
-<img src="/teaching/crs_r_an-example_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
+<img src="/teaching/hsuhk_example_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
 
