@@ -8,4 +8,4 @@ date: 2022-04-07
    </body>
 </html>
 
-### [Week 1 Introduction]
+### [Week 1 Introduction](/slides/r02/r02_ch1_introduction_220407.pptx)
