@@ -8,10 +8,10 @@ output:
 
 # 1. Environment Preparation
 
-## 1.1 Environment Clearing
+## 1.1 Environment Cleansing
 
 ```{r}
-rm(list = ls()) #remove all objects
+rm(list = ls()) # remove all objects
 ```
 
 ## 1.2 Environment Checking
@@ -52,7 +52,7 @@ dt <-  fread("~/Library/CloudStorage/OneDrive-Personal/Focus/e00/diss3_data/diss
 ```
 
 # 3 Data Tidy
-## 3.1 Variable Creation
+## 3.1 Variable Generation
 
 ```{r dv}
 dt |> setorder(mid, year) # rank the data by mid and year
@@ -88,7 +88,7 @@ dt[, train_log := ifelse(train==0, 0, round(log(train+1),3))]
 
 dt[, rratio := (rratio1+rratio2)/2] # royalty ratio
 
-dt[, pgdp := ifelse(is.na(pop),NA, round(gdp/pop,3))] # per gdp and pop 
+dt[, pgdp := ifelse(is.na(pop),NA, round(gdp/pop,3))] # gpd per capita
 dt[, pgdp_log := ifelse(pgdp==0, 0, round(log(pgdp+1),3))]
 
 dt[, pop_log := ifelse(pop==0, 0, round(log(pop+1),3))] # population 
