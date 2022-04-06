@@ -10,4 +10,5 @@ date: 2022-04-07
 
 ### [Week 1 Introduction](/slides/r02/HSUHK_haibo_220407.pptx)
 
+#### [an example](/slides/r02/example_hsuhk_220405.html)
 
