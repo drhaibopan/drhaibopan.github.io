@@ -1,5 +1,5 @@
 ---
-title: Testing 2
+title: Introduction to R and Data Analysis in R Marketing
 date: 2022-04-07
 ---
 
