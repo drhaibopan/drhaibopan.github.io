@@ -8,7 +8,7 @@ date: 2022-04-07
    </body>
 </html>
 
-### Week 1 Introduction
+### [Week 1 Introduction](/slides/r02/example_hsuhk_220407.html)
 
 
 
